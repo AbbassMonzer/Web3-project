@@ -1,0 +1,72 @@
+.wrapper {
+  margin-top: 20px;
+  background: #282A37;
+  padding: 0;
+
+
+  //left side styling
+  .form-wrapper {
+    margin-top: 20px;
+  }
+
+  .form-group {
+    margin: 30px;
+  }
+
+  input,
+  input:focus {
+    background: #323645;
+    color: #fff;
+    border: none;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 1.5px solid red;
+  }
+
+  .help-block {
+    color: red;
+  }
+
+  .submit-btn {
+    background-color: #42BBFF;
+    color: #282A37;
+  }
+
+
+  //right side styling
+  .image-wrapper {
+    background-image: linear-gradient(to left, transparent, #282A37,
+      ), url('../../assets/nature.jpg');
+    background-repeat: no-repeat;
+    margin-bottom: -32px;
+    padding-left: 20px;
+    margin-left: -12px;
+  }
+
+  .image-text {
+    color: #fff;
+    text-align: center;
+    width: 75%;
+    margin: 100px;
+  }
+
+
+  //footer
+  .card-footer,
+  label {
+    color: #FFF;
+  }
+
+  .card-footer {
+    text-align: end;
+    margin-right: 20px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .image-text {
+      width: 60%;
+    }
+  }
+}

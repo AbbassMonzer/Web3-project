@@ -1,0 +1,74 @@
+<div class="container">
+  <mat-card class="wrapper">
+    <div class="row">
+      <div class="col-lg-6 form-wrapper">
+        <mat-card-header>
+          <ng-credit-card [name]="name" [number]="number" [expiry]="expiryDate"></ng-credit-card>
+        </mat-card-header>
+        <div>
+          <form>
+            <div class="submit-form">
+              <div class="form-group">
+                <label class="control-label font-label-input-submit" for="fname">Name of credit card owner</label>
+                <div>
+                  <input type="text" class="form-control font-placeholder-input " id="name" name="name"
+                    [(ngModel)]="name" placeholder="Your Name" required autocomplete="off">
+                </div>
+                <span *ngIf="!name" class="help-block">Please Enter Your Name</span>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label font-label-input-submit" for="number">Card number</label>
+                <div>
+                  <input type="text" class="form-control font-placeholder-input " id="number" name="number"
+                    [(ngModel)]="number" placeholder="Your number" required autocomplete="off">
+                </div>
+                <span *ngIf="!number" class="help-block">Please Enter Card Number </span>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label font-label-input-submit" for="number">Expiration date</label>
+                <div>
+                  <input type="text" class="form-control font-placeholder-input " id="Date" name="Date"
+                    [(ngModel)]="expiryDate" placeholder="Your Date" required autocomplete="off">
+                </div>
+                <span *ngIf="!expiryDate" class="help-block">Please Enter A Card Expiry Date</span>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label font-label-input-submit" for="fname">CVC</label>
+                <div>
+                  <input type="text" class="form-control font-placeholder-input " id="cvc" name="cvc" [(ngModel)]="cvc"
+                    placeholder="Your cvc" required autocomplete="off">
+                </div>
+                <span *ngIf="!cvc" class="help-block">Please Enter Your Card CVC</span>
+              </div>
+
+              <div class="form-group row ">
+                <div class="text-center">
+                  <button type="button" (click)="openDialog()" class="btn submit-btn"
+                    [disabled]="!name || !number || !expiryDate || !cvc">Pay
+                    Now</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-6 image-wrapper">
+        <div class="image-text">
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat.</p>
+        </div>
+      </div>
+    </div>
+    <mat-card-content class="card-footer">
+      <h1>CF</h1>
+    </mat-card-content>
+  </mat-card>
+</div>
